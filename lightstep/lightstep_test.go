@@ -136,7 +136,8 @@ func TestWithHost(t *testing.T) {
 	)
 
 	assert.EqualValues(host, config.options.Collector.Host)
-	assert.EqualValues(host, config.options.SystemMetrics.Endpoint.Host)
+	// System metrics are not routed via the LightStep satellites
+	// assert.EqualValues(host, config.options.SystemMetrics.Endpoint.Host)
 }
 
 func TestWithPort(t *testing.T) {
@@ -148,7 +149,8 @@ func TestWithPort(t *testing.T) {
 	)
 
 	assert.EqualValues(port, config.options.Collector.Port)
-	assert.EqualValues(port, config.options.SystemMetrics.Endpoint.Port)
+	// System metrics are not routed via the LightStep satellites
+	// assert.EqualValues(port, config.options.SystemMetrics.Endpoint.Port)
 }
 
 func TestWithAccessToken(t *testing.T) {

@@ -33,7 +33,9 @@ func WithAccessToken(accessToken string) Option {
 func WithHost(host string) Option {
 	return func(c *config) {
 		c.options.Collector.Host = host
-		c.options.SystemMetrics.Endpoint.Host = host
+		// See https://invisionapp.atlassian.net/browse/ASC-553
+		// System metrics are not routed via the LightStep satellites
+		// c.options.SystemMetrics.Endpoint.Host = host
 	}
 }
 
@@ -41,7 +43,8 @@ func WithHost(host string) Option {
 func WithPort(port int) Option {
 	return func(c *config) {
 		c.options.Collector.Port = port
-		c.options.SystemMetrics.Endpoint.Port = port
+		// System metrics are not routed via the LightStep satellites
+		// c.options.SystemMetrics.Endpoint.Port = port
 	}
 }
 

@@ -1,0 +1,11 @@
+specVersion: v1
+visibility: private
+
+code-coverage:
+  # please see https://invisionapp.atlassian.net/wiki/spaces/ICT/pages/888799838/Establishing+code+coverage+goals for how to set this value appropriately
+  goal-percent: 0
+owner:
+  active:
+    team: collab-arch-eng
+    since: 2020-05-13
+
